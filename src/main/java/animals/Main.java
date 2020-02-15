@@ -14,65 +14,85 @@ public class Main {
 
         for (int i = 0; i < animals.length; i++) {
 //            do {
-                System.out.println("Jakie zwierze chcesz dodac?");
-                System.out.println("Wybierz numer: \n1: Pies \n2: Kot \n3: Wilk \n4: Wyjscie");
-                wybor = Integer.parseInt(scanner.nextLine());
-                String imie;
-                int wiek;
-                int pozycja;
+            System.out.println("Jakie zwierze chcesz dodac?");
+            System.out.println("Wybierz numer: \n1: Pies \n2: Kot \n3: Wilk \n4: Hiena \n5: Puma \n6: Wyjscie");
+            wybor = Integer.parseInt(scanner.nextLine());
+            String imie;
+            int wiek;
+            int pozycja;
 
-                switch (wybor) {
-                    case 1: {
-                        Animal animal = new Dog();
-                        System.out.println("Podaj miejsce zwierzaka w tabeli: od 0 do " + (animals.length - 1));
-                        pozycja = Integer.parseInt(scanner.nextLine());
-                        System.out.println("Podaj imie zwierzaka: ");
-                        imie = scanner.nextLine();
-                        System.out.println("Podaj wiek zwierzaka: ");
-                        wiek = Integer.parseInt(scanner.nextLine());
-                        animal.setName(imie);
-                        animal.setAge(wiek);
-                        animals[pozycja] = animal;
-                        j++;
-                        break;
-                    }
-                    case 2: {
-                        Animal animal = new Cat();
-                        System.out.println("Podaj miejsce zwierzaka w tabeli: od 0 do " + (animals.length - 1));
-                        pozycja = Integer.parseInt(scanner.nextLine());
-                        System.out.println("Podaj imie zwierzaka: ");
-                        imie = scanner.nextLine();
-                        System.out.println("Podaj wiek zwierzaka: ");
-                        wiek = Integer.parseInt(scanner.nextLine());
-                        animal.setName(imie);
-                        animal.setAge(wiek);
-                        animals[pozycja] = animal;
-                        j++;
-                        break;
-                    }
-                    case 3: {
-                        Animal animal = new Wolf();
-                        System.out.println("Podaj miejsce zwierzaka w tabeli: od 0 do " + (animals.length - 1));
-                        pozycja = Integer.parseInt(scanner.nextLine());
-                        System.out.println("Podaj imie zwierzaka: ");
-                        imie = scanner.nextLine();
-                        System.out.println("Podaj wiek zwierzaka: ");
-                        wiek = Integer.parseInt(scanner.nextLine());
-                        animal.setName(imie);
-                        animal.setAge(wiek);
-                        animals[pozycja] = animal;
-                        j++;
-                        break;
-                    }
-                    default: {
-                        System.out.println("Wyjście...");
-                    }
+            switch (wybor) {
+                case 1: {
+                    Animal animal = new Dog();
+                    System.out.println("Podaj miejsce zwierzaka w tabeli: od 0 do " + (animals.length - 1));
+                    pozycja = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Podaj imie zwierzaka: ");
+                    imie = scanner.nextLine();
+                    System.out.println("Podaj wiek zwierzaka: ");
+                    wiek = Integer.parseInt(scanner.nextLine());
+                    animal.setName(imie);
+                    animal.setAge(wiek);
+                    animals[pozycja] = animal;
+                    break;
                 }
+                case 2: {
+                    Animal animal = new Cat();
+                    System.out.println("Podaj miejsce zwierzaka w tabeli: od 0 do " + (animals.length - 1));
+                    pozycja = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Podaj imie zwierzaka: ");
+                    imie = scanner.nextLine();
+                    System.out.println("Podaj wiek zwierzaka: ");
+                    wiek = Integer.parseInt(scanner.nextLine());
+                    animal.setName(imie);
+                    animal.setAge(wiek);
+                    animals[pozycja] = animal;
+                    break;
+                }
+                case 3: {
+                    Animal animal = new Wolf();
+                    System.out.println("Podaj miejsce zwierzaka w tabeli: od 0 do " + (animals.length - 1));
+                    pozycja = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Podaj imie zwierzaka: ");
+                    imie = scanner.nextLine();
+                    System.out.println("Podaj wiek zwierzaka: ");
+                    wiek = Integer.parseInt(scanner.nextLine());
+                    animal.setName(imie);
+                    animal.setAge(wiek);
+                    animals[pozycja] = animal;
+                    break;
+                }
+                case 4: {
+                    Animal animal = new Hiena();
+                    System.out.println("Podaj miejsce zwierzaka w tabeli: od 0 do " + (animals.length - 1));
+                    pozycja = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Podaj imie zwierzaka: ");
+                    imie = scanner.nextLine();
+                    System.out.println("Podaj wiek zwierzaka: ");
+                    wiek = Integer.parseInt(scanner.nextLine());
+                    animal.setName(imie);
+                    animal.setAge(wiek);
+                    animals[pozycja] = animal;
+                    break;
+                }
+                case 5: {
+                    Animal animal = new Puma();
+                    System.out.println("Podaj miejsce zwierzaka w tabeli: od 0 do " + (animals.length - 1));
+                    pozycja = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Podaj imie zwierzaka: ");
+                    imie = scanner.nextLine();
+                    System.out.println("Podaj wiek zwierzaka: ");
+                    wiek = Integer.parseInt(scanner.nextLine());
+                    animal.setName(imie);
+                    animal.setAge(wiek);
+                    animals[pozycja] = animal;
+                    break;
+                }
+                default: {
+                    System.out.println("Wyjście...");
+                }
+            }
 //            } while (j < animals.length);
         }
-        //TODO dodac pume i hiene do switcha sprawdzic jak dziala przeszukiwanie po tych zwierzakach
-        //TODO uporzadkowac w odpowiednie metody
-        //TODO dodac ostatnie zadanie - dodawanie wlasnych gatunkow zwierzat
 
         //Printing all animals in the animals Array.
         printAllAnimalsInArray(animals);
@@ -93,7 +113,7 @@ public class Main {
         To print all animals.
      */
     public static void printAllAnimalsInArray(Animal[] animals) {
-        for(Animal animal : animals) {
+        for (Animal animal : animals) {
             System.out.println(animal.toString());
         }
     }
@@ -101,24 +121,30 @@ public class Main {
     /*
         To print selected animal.
      */
-    public static void printAnAnimal(Animal[] animals, int i){
+    public static void printAnAnimal(Animal[] animals, int i) {
         System.out.println(animals[i].toString());
     }
 
     /*
         Do odpytywania wszystkich zwierzatek
      */
-    public static void odpytajZwierzatko(Animal[] animals){
-        for (Animal animal : animals){
+    public static void odpytajZwierzatko(Animal[] animals) {
+        for (Animal animal : animals) {
             switch (animal.getClass().getSimpleName()) {
                 case ("Dog"): {
                     ((Dog) animal).hau();
                 }
                 case ("Cat"): {
-                    ((Cat)animal).miau();
+                    ((Cat) animal).miau();
                 }
                 case ("Wolf"): {
                     ((Wolf) animal).woof();
+                }
+                case ("Hiena"): {
+                    ((Dog) animal).hau();
+                }
+                case ("Puma"): {
+                    ((Cat) animal).miau();
                 }
             }
         }
@@ -127,13 +153,12 @@ public class Main {
     /*
         Do glaskania domowego zwierzaka
      */
-    public static void poglaskajZwierzatko(Animal[] animals){
-        for(Animal animal : animals) {
-            if( animal instanceof DomesticAnimal) {
+    public static void poglaskajZwierzatko(Animal[] animals) {
+        for (Animal animal : animals) {
+            if (animal instanceof DomesticAnimal) {
                 ((DomesticAnimal) animal).soundOfStrokedAnimal();
             }
         }
     }
-
 }
 
